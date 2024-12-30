@@ -5,8 +5,8 @@
 ### Requisitos Funcionais:
 - 🔗 Encurtar URLs longas para links curtos.
 - ↪️ Redirecionar o link curto para a URL original.
-- 📊 Monitorar métricas (ex.: cliques por link).
-- 🔒 Gerenciar usuários e permissões (opcional).
+- 📊 Monitorar métricas (ex.: cliques por link) (talvez).
+- 🔒 Gerenciar usuários e permissões (talvez).
 
 ### Requisitos Não Funcionais:
 - 🚀 Alta disponibilidade e desempenho.
