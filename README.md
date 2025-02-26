@@ -6,7 +6,7 @@
 - 🔗 Encurtar URLs longas para links curtos.
 - ↪️ Redirecionar o link curto para a URL original.
 - 📊 Monitorar métricas (ex.: cliques por link) (talvez).
-- 🔒 Gerenciar usuários e permissões (talvez).
+- 🔒 Gerenciar usuários e permissões, excluir link's em 5h de usuários não logados.
 
 ### Requisitos Não Funcionais:
 - 🚀 Alta disponibilidade e desempenho.
@@ -46,6 +46,9 @@
 ### Monitoramento:
 - 📈 **Prometheus + Grafana** para métricas.
 - 🔍 **Elastic Stack (ELK)** para logs.
+
+## Outros
+- 📈 **Implementar relatórios com Jasper Report
 
 ---
 
