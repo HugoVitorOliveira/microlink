@@ -48,7 +48,7 @@
 - 🔍 **Elastic Stack (ELK)** para logs.
 
 ## Outros
-- 📈 **Implementar relatórios com Jasper Report
+- 📈 **Implementar relatórios com Jasper Report**
 
 ---
 
@@ -64,7 +64,7 @@
 
 ### Testes:
 - 🧪 Escrever testes unitários e de integração.
-- 🛠️ Realizar testes de carga (ex.: **JMeter**).
+- 🛠️ Realizar testes de carga (ex.: **JMeter ou PostMan Collections**).
 
 ### Iteração:
 - 🔄 Melhorar continuamente com feedback de usuários.
