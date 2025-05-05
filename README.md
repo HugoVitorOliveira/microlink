@@ -61,7 +61,6 @@
 - 🗺️ Create flow and architecture diagrams.  
 
 ### 👨‍💻 Implementation
-- 🧱 Break the system into microservices.  
 - 🧼 Apply best practices like **SOLID** and **Clean Code**.  
 
 ### 🧪 Testing
