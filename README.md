@@ -1,71 +1,73 @@
-# 🌐 Resumo do Projeto Microlink
+# 🌐 Microlink Project Overview
 
 ## 🏗️ System Design
 
-### Requisitos Funcionais:
-- 🔗 Encurtar URLs longas para links curtos.
-- ↪️ Redirecionar o link curto para a URL original.
-- 📊 Monitorar métricas (ex.: cliques por link) (talvez).
-- 🔒 Gerenciar usuários e permissões, excluir link's em 5h de usuários não logados.
+### ✅ Functional Requirements
+- 🔗 Shorten long URLs into short links.  
+- ↪️ Redirect short links to their original URLs.  
+- 📊 Track metrics: clicks per link, by city/state/country, by hour/day/month, etc.  
+- 🧑‍💼 Manage users and permissions, automatically delete links after 5 hours for anonymous users.  
 
-### Requisitos Não Funcionais:
-- 🚀 Alta disponibilidade e desempenho.
-- ⚖️ Escalabilidade horizontal para atender a muitos usuários.
-- 🛡️ Segurança no armazenamento e redirecionamento de URLs.
+### ⚙️ Non-Functional Requirements
+- ⚡ High availability and performance.  
+- 📈 Horizontal scalability to support many users simultaneously.  
+- 🧰 Secure storage and redirection of URLs.  
 
-### Arquitetura:
-- **Frontend**: Interface simples para criar e gerenciar URLs.
-- **Backend**: API para geração e redirecionamento de URLs.
-- **Banco de Dados**:
-  - 🎯 Relacional: **PostgreSQL** para gerenciar metadados e usuários.
+### 🧱 Architecture
+- **Frontend**: User interface to create and manage URLs.  
+- **Backend**: API responsible for URL generation and redirection.  
+- **Database**:  
+  - 🗄️ Relational: **PostgreSQL** for metadata and user management.  
+  - 📂 Non-relational: **MongoDB** for storing shortened links.  
 
-### Fluxo Geral:
-1. Cliente envia URL longa ao backend.
-2. Backend gera um ID único (ex.: hash ou UUID).
-3. URL curta é salva no banco com a URL original e metadados.
-4. Redirecionamentos são resolvidos pelo backend e cache.
-
----
-
-## 💻 Tecnologias
-
-### Backend:
-- 🖥️ **Quarkus**: Framework leve e performático para microsserviços.
-
-### Banco de Dados:
-- 🗂️ **PostgreSQL**.
-
-### Frontend:
-- 💅 **Angular** para criar uma interface intuitiva.
-
-### DevOps:
-- 🐳 **Docker** para containerização.
-- 🏗️ **Kubernetes** para orquestração.
-- 🚀 **CI/CD**: **GitHub Actions**.
-
-### Monitoramento:
-- 📈 **Prometheus + Grafana** para métricas.
-- 🔍 **Elastic Stack (ELK)** para logs.
-
-## Outros
-- 📈 **Implementar relatórios com Jasper Report**
+### 🔄 General Flow
+1. The client sends a long URL to the backend.  
+2. The backend generates a unique hash (shortened SHA-256).  
+3. The short URL is saved along with the original URL and metadata.  
+4. Redirects are handled by the backend with caching support.  
 
 ---
 
-## 🧩 Metodologia
+## 💻 Technologies
 
-### Planejamento:
-- 🎯 Definir casos de uso e requisitos.
-- 📝 Criar diagramas de fluxo e arquitetura.
+### 🧠 Backend
+- 🖥️ **Quarkus** – Lightweight and performant microservices framework.  
 
-### Implementação:
-- 🔨 Dividir em serviços menores (microsserviços).
-- 📦 Usar boas práticas como SOLID e **Clean Code**.
+### 🗃️ Database
+- 🛢️ **PostgreSQL**  
+- 📘 **MongoDB**  
 
-### Testes:
-- 🧪 Escrever testes unitários e de integração.
-- 🛠️ Realizar testes de carga (ex.: **JMeter ou PostMan Collections**).
+### 🧑‍🎨 Frontend
+- 🅰️ **Angular** – Intuitive and responsive user interface.  
 
-### Iteração:
-- 🔄 Melhorar continuamente com feedback de usuários.
-- ⚙️ Escalar conforme o aumento do tráfego.
+### ⚙️ DevOps
+- 🐋 **Docker** – Containerization of services.  
+- 📦 **Kubernetes** – Container orchestration.  
+- 🔁 **GitHub Actions** – Continuous integration and delivery (CI/CD).  
+
+### 📡 Monitoring
+- 📊 **Prometheus + Grafana** – Metrics collection and visualization.  
+- 🪵 **Elastic Stack (ELK)** – Log monitoring and analysis.  
+
+## 📄 Others
+- 🧾 Report generation using **Jasper Reports**.  
+
+---
+
+## 🧩 Methodology
+
+### 📌 Planning
+- 🎯 Define use cases and requirements.  
+- 🗺️ Create flow and architecture diagrams.  
+
+### 👨‍💻 Implementation
+- 🧱 Break the system into microservices.  
+- 🧼 Apply best practices like **SOLID** and **Clean Code**.  
+
+### 🧪 Testing
+- 🔍 Write unit and integration tests.  
+- 🧰 Load testing with tools like **JMeter** or **Postman Collections**.  
+
+### 🔁 Iteration
+- 💡 Continuous improvement based on user feedback.  
+- 🌐 Scale as traffic increases.  
